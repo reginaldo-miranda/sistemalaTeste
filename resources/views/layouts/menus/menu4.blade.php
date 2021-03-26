@@ -1,3 +1,5 @@
+
+<style type="text/css">
 <style>
 * {
     margin: 0;
@@ -5,20 +7,23 @@
 }
 
 header{
-    width: 100%;
-    height: 50px;
-    top:50px;
+    width: 80%;
+    height: 43px;
+    top:63px;
     left:0 ;
     background-color: #5b859a;
     position: fixed;
+    margin-left: 55px;
+    text-align: center;
 
 }
 
 .menu-icon{
-    position: fixed;
+    margin-left: 22px;
+   /* position: fixed; */
     font-size: 25px;
     font-weight: bold;
-    padding: 5px;
+    padding: 4px;
     width: 40px;
     text-align: center;
     background-color: #5b859a;
@@ -27,6 +32,7 @@ header{
     transition: all .4s;
     left:300px;
     top:5;
+
 
 }
 .menu-icon:hover{
@@ -116,9 +122,9 @@ ul li a:hover{
 
 
 <header>
-    {{-- <div  id="spanbtn" class="col-12">   offset-2 col-sm-8 offset-2 col-xs-12">  --}}
+    {{-- <div  id="spanbtn" class="col-12">   offset-2 col-sm-8 offset-2 col-xs-12">
 
-        <span id="spanbtn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+        <span id="spanbtn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span> --}}
 
          <a href="#">pedido</a>
          <a href="#" id="menuoperacional">Nota Fiscal</a>
@@ -129,11 +135,12 @@ ul li a:hover{
     {{--   </div> --}}
 
 </header>
-{{--
+
 <input type="checkbox" id="chk">
 <label for="chk" class="menu-icon">&#9776;</label>
- --}}
-<div class="bg"></div>
+
+
+< class="bg"></>
 
 <nav class="menu" id="principal">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -161,3 +168,4 @@ ul li a:hover{
         <li><a href="#">Configuracoes</a></li>
     </ul>
 </nav>
+
