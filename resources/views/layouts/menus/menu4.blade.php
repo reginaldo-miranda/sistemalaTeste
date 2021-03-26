@@ -1,89 +1,163 @@
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    top:50px;
+    left:0 ;
+    background-color: #5b859a;
+    position: fixed;
+
+}
+
+.menu-icon{
+    position: fixed;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    width: 40px;
+    text-align: center;
+    background-color: #5b859a;
+    color #fff;
+    cursor: pointer;
+    transition: all .4s;
+    left:300px;
+    top:5;
+
+}
+.menu-icon:hover{
+
+    background-color: #fff;
+    color: #5b859a;
+}
+#chk{
+   /* position: absolute; */
+    display: none;
+}
+.menu{
+    height: 90%;
+    position: fixed;
+    background-color: #222;
+    top:110px;
+    overflow: hidden;
+    transition: all .2s
+}
+#principal{
+    width: 300px;
+    left: -300px;
+}
+ul{
+    list-style: none;
+
+}
+ul li a{
+  display: block;
+  font-size: 18px;
+  fonte-family: 'Arial';
+  padding: 10px;
+  border-bottom: solid 1px #000;
+  color: #ccc;
+  text-decoration: none;
+  transition: all .2s;
+
+}
+
+ul li span{
+  float: right;
+  padding-right:  10px;
+
+}
+ul li a:hover{
+    background-color: #5b859a;
+}
+
+.voltar{
+
+    margin-top: 60px;
+    background-color:   #111;
+    border-left: solid 5px #444;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgb(0,0,0, .6);
+    display: none;
+
+}
+
+#chk:checked ~bg{
+    display: block;
+
+}
+#chk:checked ~ #principal{
+    transform: translateX(300px);
+
+}
+
+#produtos,#funcionais{
+    width: 250px;
+    left: -250px;
+}
+#produtos:target,#funcionais:target{
+  transform: translateX(250px);
+  box-shadow: 2px, 2px, 5px, 2px rgba(0,0,0,.5);
+}
 
 
-  <div class="row">
-      <div  id="spanbtn" class="col-md-12 offset-2 col-sm-8 offset-2 col-xs-12">
-
-          <span id="spanbtn" style="font-size:30px ; cursor:pointer" onclick="openNav()"> &#9776; </span>
-
-         {{--  <a href="{{ route('pedido.index') }}" id="menuoperacional">Pedido</a>  --}}
-          <a href="#">pedido</a>
-          <a href="#" id="menuoperacional">Nota Fiscal</a>
-          <a href="#" id="menuoperacional">Funcionário</a>
-          <a href="#">teste</a>
-          <a href="#" id="menuoperacional">Produtos</a>
-      </div>
-    </div>
+</style>
 
 
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn"  style="font-size:25px" onclick="closeNav()">&times;</a>
 
-        <ul>
-          <li>
-              <a href="#">cadastro</a>
-              <ul>
-                  <a>Cadastro</a>
-                  <li><a id="espacomenu" href="#">Clientes</a></li>
-                  <li><a id="espacomenu" href="#">Fornecedor</a></li>
-                  <li><a id="espacomenu" href="#"{{--  {{ route('usuario.index') }} --}}>Usuario</a></li>
-                  {{--  <><a id="espacomenu" href="{{ route('funcionario.index') }}">Funcionário</a></>
-                  <li><a id="espacomenu" href="{{ route('usuario.index') }}">Usuario</a></li> --}}
+<header>
+    {{-- <div  id="spanbtn" class="col-12">   offset-2 col-sm-8 offset-2 col-xs-12">  --}}
 
-                    <li id="espacomenu">
-                       <a href="#">Porudtos</a>
-                        <ul id="teste">
-                          <li>grupos</li>
-                          <li>tipo</li>
-                        </ul>
-                    </li>
+        <span id="spanbtn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
 
-               </ul>
-          </li>
-        </ul>
+         <a href="#">pedido</a>
+         <a href="#" id="menuoperacional">Nota Fiscal</a>
+         <a href="#" id="menuoperacional">Funcionário</a>
+         <a href="#" id="menuoperacional">teste</a>
+         <a href="#" id="menuoperacional">Produtos</a>
 
-        <ul>
-            <li>
-                <a href="#">Relatorios</a>
-                <ul>
-                    <a>relatorios</a>
-                    <li><a id="espacomenu" href="#">Clientes</a></li>
-                    <li><a id="espacomenu" href="#">Fornecedor</a></li>
-                    {{-- <li><a id="espacomenu" href="{{ route('funcionario.index') }}">Funcionario</a></li>
-                    <li><a id="espacomenu" href="{{ route('usuario.index') }}">Usuario</a></li>
-                    <li><a id="espacomenu" href="{{ route('produto.index') }}">Produtos</a></li>  --}}
-                </ul>
-            </li>
-        </ul>
+    {{--   </div> --}}
 
-        <ul>
-            <li>
-                <a href="#">Cad Opercaionais</a>
-                <ul>
-                    <a>Outros Cadastros</a>
-                    {{-- <li><a id="espacomenu" href="{{ route('empresa.index') }}">Empresa</a></li>
-                    <li><a id="espacomenu" href="{{ route('formapgto.index') }}">cond pagamento</a></li>  --}}
-                    <li><a id="espacomenu" href="#">a fazer</a></li>
-                    <li><a id="espacomenu" href="#">a fazer</a></li>
-                    <li><a id="espacomenu" href="#">a fazer</a><li>
-                 </ul>
-            </li>
-        </ul>
+</header>
+{{--
+<input type="checkbox" id="chk">
+<label for="chk" class="menu-icon">&#9776;</label>
+ --}}
+<div class="bg"></div>
 
-    </div>
-</div>
+<nav class="menu" id="principal">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul>
+        <li><a href="#" class="voltar">Voltar</a></li>
+        <li><a href="#">Clientes</a></li>
+        <li><a href="#">Fornecedores</a></li>
+        <li><a href="#produtos">Produtos<span>+</span> </a></li>
+        <li><a href="#">Usarios</a></li>
+        <li><a href="#funcionais">funcionais<span>+</span> </a></li>
+    </ul>
 
-
-    {{-- <h2>Animated Sidenav Example</h2>
-    <p>Click on the element below to open the side navigation menu.</p> --}}
-    {{-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>  --}}
-
-    <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "470px";
-      document.getElementById("mySidenav").style.height = "300px";
-    }
-
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    }
-    </script>
+</nav>
+<nav class="menu" id="produtos">
+    <ul>
+        <li><a href="#" class="voltar">Voltar</a></li>
+        <li><a href="#">Grupos</a></li>
+        <li><a href="#">Tipos</a></li>
+    </ul>
+</nav>
+<nav class="menu" id="funcionais">
+    <ul>
+        <li><a href="#" class="voltar">Voltar</a></li>
+        <li><a href="#">Empresa</a></li>
+        <li><a href="#">Configuracoes</a></li>
+    </ul>
+</nav>

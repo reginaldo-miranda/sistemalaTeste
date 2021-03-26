@@ -9,7 +9,7 @@
         </h2>  --}}
 
     </x-slot>
-     @include('layouts.menus.menu2')
+     @include('layouts.menus.menu4')
 {{--
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
