@@ -1,4 +1,4 @@
-
+<html>
 <style type="text/css">
 <style>
 * {
@@ -7,20 +7,20 @@
 }
 
 header{
-    width: 80%;
+    width: 95%;
     height: 43px;
-    top:63px;
-    left:0 ;
+    margin-top: 2px;
+    margin-left:19px ;
     background-color: #5b859a;
-    position: fixed;
-    margin-left: 55px;
-    text-align: center;
+/*    position: fixed; */
+
+  /* text-align: center; */
 
 }
-
+/*
 .menu-icon{
     margin-left: 22px;
-   /* position: fixed; */
+   /* position: fixed;
     font-size: 25px;
     font-weight: bold;
     padding: 4px;
@@ -34,7 +34,24 @@ header{
     top:5;
 
 
+} */
+
+.btn-icon{
+     position: fixed;
+     font-size: 20px;
+     font-weight: bold;
+     padding: 5px;
+     width: 40px;
+    /* text-align: center; */
+     background-color: #5b859a;
+     color #fff;
+     cursor: pointer;
+     transition: all .4s;
+   /*  left:300px; */
+     top:6;
+
 }
+
 .menu-icon:hover{
 
     background-color: #fff;
@@ -51,10 +68,12 @@ header{
     top:110px;
     overflow: hidden;
     transition: all .2s
+
 }
 #principal{
     width: 300px;
     left: -300px;
+    padding-left:  20px;
 }
 ul{
     list-style: none;
@@ -62,19 +81,20 @@ ul{
 }
 ul li a{
   display: block;
-  font-size: 18px;
+  font-size: 15px;
   fonte-family: 'Arial';
-  padding: 10px;
+  padding: 0;
   border-bottom: solid 1px #000;
   color: #ccc;
   text-decoration: none;
   transition: all .2s;
+  height: 20px;
 
 }
 
 ul li span{
   float: right;
-  padding-right:  10px;
+  padding-right: 5px;
 
 }
 ul li a:hover{
@@ -103,47 +123,54 @@ ul li a:hover{
 
 }
 #chk:checked ~ #principal{
-    transform: translateX(300px);
+    transform: translateX(320px);
 
 }
 
 #produtos,#funcionais{
-    width: 250px;
-    left: -250px;
-}
-#produtos:target,#funcionais:target{
-  transform: translateX(250px);
-  box-shadow: 2px, 2px, 5px, 2px rgba(0,0,0,.5);
+    width: 300px;
+    left: -300px;
+    padding-left: 20px;
+
 }
 
+#produtos:target,#funcionais:target{
+  transform: translateX(320px);
+  box-shadow: 2px, 2px, 5px, 2px rgba(0,0,0,.5);
+
+}
+#botao{
+    text-align: center;
+}
 
 </style>
 
 
 
 <header>
-    {{-- <div  id="spanbtn" class="col-12">   offset-2 col-sm-8 offset-2 col-xs-12">
+    <label for="chk" class="btn-icon">&#9776;</label>
+     <div id="botao">
 
-        <span id="spanbtn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span> --}}
 
-         <a href="#">pedido</a>
-         <a href="#" id="menuoperacional">Nota Fiscal</a>
-         <a href="#" id="menuoperacional">Funcionário</a>
-         <a href="#" id="menuoperacional">teste</a>
-         <a href="#" id="menuoperacional">Produtos</a>
+            <a href="#">pedido</a>
+            <a href="#" id="menuoperacional">Nota Fiscal</a>
+            <a href="#" id="menuoperacional">Funcionário</a>
+            <a href="#" id="menuoperacional">teste</a>
+            <a href="#" id="menuoperacional">Produtos</a>
 
-    {{--   </div> --}}
+      </div>
+
 
 </header>
 
 <input type="checkbox" id="chk">
-<label for="chk" class="menu-icon">&#9776;</label>
+{{-- <label for="chk" class="menu-icon">&#9776;</label>  --}}
 
 
-< class="bg"></>
+<div class="bg"></div>
 
 <nav class="menu" id="principal">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
     <ul>
         <li><a href="#" class="voltar">Voltar</a></li>
         <li><a href="#">Clientes</a></li>
@@ -169,3 +196,4 @@ ul li a:hover{
     </ul>
 </nav>
 
+</html>
