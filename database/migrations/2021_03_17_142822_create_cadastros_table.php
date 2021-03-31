@@ -14,10 +14,9 @@ class CreateCadastrosTable extends Migration
     public function up()
     {
         Schema::create('cadastros', function (Blueprint $table) {
-        
+
             $table->increments('id_codigo');
-            // $table->Codigo varchar(15),
-            $table->smallint('Ativo');
+            $table->integer('Ativo');
             $table->string('Nome', 100);
             $table->string('Fantasia',80);
             $table->string('Endereco', 100);
@@ -32,12 +31,12 @@ class CreateCadastrosTable extends Migration
             $table->string('Documento1', 20);
             $table->string('Documento2', 20);
             $table->string('Pessoa', 1);
-            $table->smallint('flagCli');
-            $table->smallint('flagFor');
-            $table->smallint('flagVen');
-            $table->smallint('flagTransp');
-            $table->smallint('flagConp');
-            $table->smallint('flagConc');
+            $table->integer('flagCli');
+            $table->integer('flagFor');
+            $table->integer('flagVen');
+            $table->integer('flagTransp');
+            $table->integer('flagConp');
+            $table->integer('flagConc');
             $table->string('Email', 60);
             $table->text('Obs');
             $table->string('Usuario', 50);
@@ -47,7 +46,7 @@ class CreateCadastrosTable extends Migration
             $table->float('ComVend');
             $table->string('CodVend', 15);
             $table->string('CodTransp', 15);
-            $table->smallint('flagTecnico');
+            $table->integer('flagTecnico');
             $table->integer('Bloqueado');
             $table->string('MotivoBloqueio', 50);
             $table->float('DescMaxVend');
@@ -57,29 +56,29 @@ class CreateCadastrosTable extends Migration
             $table->string('Regiao');
             $table->float('LimCredito');
             $table->float('SaldoUtilizado');
-            $table->smallint('Transmitido');
-            $table->smallint('FlagGuia');
+            $table->integer('Transmitido');
+            $table->integer('FlagGuia');
             $table->integer('CodPais');
-            $table->smallint('FlagMotorista');
-            $table->smallint('EmpresaFat');
-            $table->smallint('FlagCRM');
+            $table->integer('FlagMotorista');
+            $table->integer('EmpresaFat');
+            $table->integer('FlagCRM');
             $table->string('CodGuia');
             $table->float('ComisGuia');
             $table->string('CodTabPreco');
             $table->string('CodCtaRazao', 6);
-            $table->smallint('FlagGerRisco');
+            $table->integer('FlagGerRisco');
             $table->string('ComplEnd',30);
             $table->float('TipoNota');
-            $table->smallint('FlagFuncionario');
-            $table->smallint('FlagPrestServ');
-            $table->smallint('FlagEntregador');
-            $table->smallint('FlagNFeAnfavea');
+            $table->integer('FlagFuncionario');
+            $table->integer('FlagPrestServ');
+            $table->integer('FlagEntregador');
+            $table->integer('FlagNFeAnfavea');
             $table->string('DocEstrangeiro',20);
             $table->time('HoraAlt');
             $table->integer('EndEntrega');
             $table->integer('EndCobranca');
             $table->timestamps();
-        
+
         });
     }
 

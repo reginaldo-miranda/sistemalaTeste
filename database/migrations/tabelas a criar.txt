@@ -1,0 +1,27 @@
+
+create table tabtam (
+  CODTAM varchar(6),
+  ORDEM varchar(6),
+  DESCRICAO varchar(30),
+ primary key (CODTAM));
+
+create table tabtipo (
+  CodTipo varchar(6),
+  Nome varchar(30),
+ primary key (CodTipo));
+
+
+create table cartao (
+  Ai int auto_increment,
+  Codigo varchar(10),
+  Descricao varchar(50),
+  CtaRazao varchar(15),
+  TaxAdministradora float,
+  DiasRecebimento int,
+  TipoPagto int,
+  FlagTEF smallint,
+  Parcelas int,
+  CodCadastro varchar(15),
+  Conta varchar(12),
+  Bandeira varchar(2),
+ primary key (Ai));
