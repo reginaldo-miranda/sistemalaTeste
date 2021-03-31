@@ -8,13 +8,23 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Styles -->
+        <link href="js/app.js">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+        <link href="js/bootstrap.mim.js">
+        <link herf="js/menujs.js">
+
 
         <!-- Scripts -->
+        <script>src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script>src="{{ asset('js/menujs.js') }}"</script>
+
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
@@ -27,5 +37,6 @@
             </main>
         </div>
         @livewireScripts
+
     </body>
 </html>
