@@ -10,6 +10,9 @@ class grupo extends Model
     use HasFactory;
 
     protected $primaryKey = 'id_grupo';
-   /* protected $fillable =['nomeCliente'];*/
+
+    protected $fillable =['nome', 'codPai', 'publicarWeb','nomeWeb', 'comissao','reajuste', 'flagMerc',
+   'flagFabr', 'flagInsumo', 'flagComis' , 'flagComisGuia', 'menuWeb' ];
+
     protected $table='grupos';
 }
