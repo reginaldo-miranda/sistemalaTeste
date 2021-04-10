@@ -23,5 +23,6 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+Route::resource('/grupo', 'GrupoController');
 
 //php artisan make:model Todo -mcr

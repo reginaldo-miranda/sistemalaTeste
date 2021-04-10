@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Http\Livewire;
+
+use Livewire\Component;
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -13,6 +17,5 @@ class grupo extends Model
 
     protected $fillable =['nome', 'codPai', 'publicarWeb','nomeWeb', 'comissao','reajuste', 'flagMerc',
    'flagFabr', 'flagInsumo', 'flagComis' , 'flagComisGuia', 'menuWeb' ];
-
     protected $table='grupos';
 }

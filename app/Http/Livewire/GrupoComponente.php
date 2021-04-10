@@ -3,11 +3,15 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\grupo;
+
 
 class GrupoComponente extends Component
 {
+
     public function render()
     {
-        return view('livewire.grupo-componente');
+
+        return view('livewire.Grupo-Componente');
     }
 }
