@@ -11,9 +11,20 @@ class GrupoComponente extends Component
     public $message = 'teste de aqui';
     public function render()
     {
-        $grupo = grupo::get();
-           
-        return view('livewire.Grupo-Componente',compact('grupo'));
+        $grupo = grupo::all();         
+
+     /*   return view('livewire.Grupo-Componente',[
+            'grupo' => grupo::all(),
+            
+        ]);*/
+
+   //     return redirect()->to('/layouts.frAdmin',[
+            'grupo' => grupo::all(),
+        ]);
+
+
+      //  return redirect()->to('/contact-form-success');
     }
 
 }
+
