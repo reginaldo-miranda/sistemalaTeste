@@ -14,7 +14,7 @@ class CartaoController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**

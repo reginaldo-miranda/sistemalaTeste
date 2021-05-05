@@ -41,11 +41,11 @@
          <div class="min-h-screen">
             @include('layouts.navigation')
             <!-- Page Content -->
-            <main>
+           {{--  <main>
               {{ $slot }}  
-            </main>
+            </main>  --}}
         </div>  
-        
+        @livewire('grupo-componente')
         @livewireScripts
 
     </body>

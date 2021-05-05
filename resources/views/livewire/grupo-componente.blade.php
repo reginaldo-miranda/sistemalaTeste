@@ -7,7 +7,7 @@
     <div class="col-sm-9">
   
         {{-- @include('layouts.Produtos.frGrupoProdIndex')  --}}
-        @include('layouts.frAdmin')
+        @include('livewire.showgrupo')
 
     </div>
     

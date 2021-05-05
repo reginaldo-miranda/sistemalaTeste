@@ -2,10 +2,8 @@
 namespace App\Http\Livewire;
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
-use Livewire\Component;
-
 use App\Models\grupo;
-use Illuminate\Http\Request;
+
 
 class GrupoController extends Controller
 {
@@ -16,7 +14,7 @@ class GrupoController extends Controller
      */
     public function index()
     {
-        return view('layouts.Produtos.frGrupoProdIndex');
+        return view('layouts.frAdmin');
     }
 
     /**
