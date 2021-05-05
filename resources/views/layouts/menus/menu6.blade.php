@@ -196,8 +196,7 @@ header{
             <li><a class="produtos" href="#">Produtos<span class="material-icons seta1">arrow_right</span></a>
                 <ul class="itemprodutos" >
                     <li><a href="#">Produtos</a></li>
-                    <li><a href="{{ route('admin')}}">Grupo</a></li>
-                   
+                    <li><a href="{{ route('grupo.index')}}">Grupo</a></li>
                     <li><a href="#">Tipos</a></li>
                 </ul>
             </li>

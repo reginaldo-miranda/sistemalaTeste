@@ -37,15 +37,15 @@
       @livewireStyles
     </head>
     <body class="font-sans antialiased">
-
+          @include('layouts.menus.menu6')
          <div class="min-h-screen">
             @include('layouts.navigation')
             <!-- Page Content -->
-           {{--  <main>
-              {{ $slot }}  
-            </main>  --}}
+            <main>
+               {{--  {{ $slot }}  --}}
+            </main>
         </div>  
-        @livewire('grupo-componente')
+        
         @livewireScripts
 
     </body>

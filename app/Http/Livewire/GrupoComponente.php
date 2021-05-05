@@ -8,23 +8,12 @@ use Livewire\Component;
 
 class GrupoComponente extends Component
 {
-    public $message = 'teste de aqui';
-
+    public $message = 'mensagem do render';
     public function render()
     {
-
-      return view('livewire.grupo-Componente',[
-            'grupo' => grupo::all(),
-            
-        ]);
-
-   /*  return redirect()->to('/layouts.frAdmin',[
-            'grupo' => grupo::all()
-        ]);*/
-
-
-      //  return redirect()->to('/contact-form-success');
+        $grupo = grupo::get();
+           
+        return view('livewire.Grupo-Componente',compact('grupo'));
     }
 
 }
-
