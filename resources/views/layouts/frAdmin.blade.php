@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app')  
 <h1>estou em admin</h1>
 
       @livewire('grupo-componente')
