@@ -35,9 +35,11 @@
       {{--     <script>src="{{ asset('js/menujs.js') }}"</script>  --}}
 
       @livewireStyles
+     
     </head>
+    @include('layouts.menus.menu6')
     <body class="font-sans antialiased">
-          @include('layouts.menus.menu6')
+      
          <div class="min-h-screen">
             @include('layouts.navigation')
             <!-- Page Content -->
@@ -47,6 +49,7 @@
         </div>  
         
         @livewireScripts
-
+      
     </body>
+   
 </html>

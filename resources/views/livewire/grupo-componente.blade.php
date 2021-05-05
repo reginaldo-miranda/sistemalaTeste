@@ -1,8 +1,8 @@
 <div>
-@extends('layouts.app')
-    {{-- Be like water. --}}
+ @extends('layouts.app') 
+    {{-- Be like water. 
     <h2>ola mundo estou no form grupo-componente </h2>
-    <p>{{ $message }}</p>
+    <p>{{ $message }}</p> --}}
     <form method="POST" wire:submit="cdddreate">
         @csrf
         <input text="text" name="grupo" id="grupo" wire:model="grupo">

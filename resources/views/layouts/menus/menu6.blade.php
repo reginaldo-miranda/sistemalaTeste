@@ -25,7 +25,7 @@ header{
     background-color: #07293a;
     width: 250px;
     height: 400px;
-    position: fixed;
+    position: fixed; 
     left: -270px;
     transition: left 0.5s;
 

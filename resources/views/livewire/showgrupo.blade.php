@@ -1,5 +1,5 @@
     {{-- Be like water. --}}
-    <h2>estou na fr grupos</h2>
+    <h2>estou na fr show</h2>
     <form method="POST" wire:submit="cdddreate">
        @csrf
        <input text="text" name="grupo" id="grupo" wire:model="grupo">
